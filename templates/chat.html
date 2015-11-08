@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Чат</title>
+</head>
+<body>
+<h1>Добро пожаловать в чат</h1>
+<form action="/query">
+    Введите вопрос: <input type="text" name="query">
+    <input type="submit" value="Submit"><br><br>
+    <h2>{{ response }}</h2>
+    {% csrf_token %}
+</form>
+</body>
+</html>
