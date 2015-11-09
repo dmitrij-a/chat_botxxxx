@@ -6,11 +6,19 @@
 </head>
 <body>
 <h1>Добро пожаловать в чат</h1>
-<form action="/query">
+<form action="/query/" method="post">
+    <textarea readonly="readonly" rows="10" cols="90" placeholder="История чата" id="ta">
+        {% for message in response %}
+            {{ message }}
+        {% endfor %}
+    </textarea><br>
     Введите вопрос: <input type="text" name="query">
     <input type="submit" value="Submit"><br><br>
-    <h2>{{ response }}</h2>
     {% csrf_token %}
 </form>
+<script>
+    var textarea = document.getElementById('ta');
+    textarea.scrollTop = textarea.scrollHeight;
+</script>
 </body>
 </html>
