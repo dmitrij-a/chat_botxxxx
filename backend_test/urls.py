@@ -18,7 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'chat_bot.views.homepage', name='home'),
-    url(r'^chat/', 'chat_bot.views.chat', name='chat'),
+    url(r'^$', 'chat_bot.views.chat_page', name='chat'),
     url(r'^query/', 'chat_bot.views.chat_bot', name='chat'),
 ]
